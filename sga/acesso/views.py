@@ -84,7 +84,7 @@ def adicionar_conta_senha(request):
         SenhasContas.objects.create(usuario=usuario, nomeContaVic=nomeContaVic, senhaContasHash=senhaContasHash)
 
         messages.success(request, 'Conta e senha adicionadas com sucesso')
-        return redirect('index')
+        return redirect('adicionar_conta_senha')
     else:
         return render(request, 'adicionar_conta_senha.html')
     
