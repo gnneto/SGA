@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Adicionar Conta e Senha</h2>
+  <form method="post">
+    {% csrf_token %}
+    <label for="nomeContaVic">Nome da Conta:</label><br>
+    <input type="text" id="nomeContaVic" name="nomeContaVic"><br>
+    <label for="senhaContasHash">Senha:</label><br>
+    <input type="password" id="senhaContasHash" name="senhaContasHash"><br>
+    <input type="submit" value="Adicionar">
+  </form>
+{% endblock %}

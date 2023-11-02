@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Armazenar Senha
+{% endblock %}
+
+{% block content %}
+<h2>Armazenar Senha</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="nomeContaVic">Nome da Conta:</label><br>
+    <input type="text" id="nomeContaVic" name="nomeContaVic"><br>
+    <label for="senhaContasHash">Senha:</label><br>
+    <input type="password" id="senhaContasHash" name="senhaContasHash"><br>
+    <input type="submit" value="Salvar">
+</form>
+{% endblock %}
