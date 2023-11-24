@@ -6,8 +6,20 @@
     <a href="{% url 'adicionar_conta_senha' %}">Adicinar conta</a><br><br>
     <a href="{% url 'editar_conta_senha' %}">Editar contas</a><br><br><br>
     <a class="nav-link" href="{% url 'logout' %}">Sair</a>
+    <br><br>
+    <p>links gerais:</p>
+    <a href="{% url 'armazenar_senha' %}">armazenar_senha/</a><br><br>
+    <a href="{% url 'exibir_senhas' %}">exibir_senhas/</a><br><br>
+    <a href="{% url 'adicionar_conta_senha' %}">adicionar_conta_senha/</a><br><br>
+    <a href="{% url 'editar_conta_senha' %}">editar_conta_senha/</a><br><br>
 {% else %}
     <h3>voce nao esta logado</h3>
+    links gerais:
+    <a href="{% url 'armazenar_senha' %}">armazenar_senha/</a><br><br>
+    <a href="{% url 'exibir_senhas' %}">exibir_senhas/</a><br><br>
+    <a href="{% url 'adicionar_conta_senha' %}">adicionar_conta_senha/</a><br><br>
+    <a href="{% url 'editar_conta_senha' %}">editar_conta_senha/</a><br><br>
+
     <a href="{% url 'login' %}">LOGIN</a><br><br>
     <a href="{% url 'registro' %}">CRIAR CONTA</a><br><br>
 {% endif %}
