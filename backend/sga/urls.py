@@ -18,20 +18,20 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework import routers
-from api import viewsets as UsuariosViewSet
-from api import viewsets as SenhasContasViewSet
-from api import viewsets as HistoricoSenhaViewSet
+from acesso.api import viewsets as usuariosViewsets
+from acesso.api import viewsets as senhasContasViewSet
+from acesso.api import viewsets as HistoricoSenhaViewSet
 
 route = routers.DefaultRouter()
 
-route.register(r'acesso/',UsuariosViewSet.UsuariosViewSet, basename='Usuarios')
-route.register(r'acesso/',SenhasContasViewSet.SenhasContasViewSet, basename='SenhasContas')
-route.register(r'acesso/',HistoricoSenhaViewSet.HistoricoSenhaViewSet, basename='HistoricoSenha')
+route.register(r'usuarios', usuariosViewsets.UsuariosViewSet, basename='Usuarios')
+route.register(r'historicoSenhas',HistoricoSenhaViewSet.HistoricoSenhaViewSet, basename='HistoricoSenha')
+route.register(r'senhasContas', senhasContasViewSet.SenhasContasViewSet, basename='SenhasContas')
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('acesso.urls')),
-    path('Localhost/api/',include(route.urls))
+    path('api/',include(route.urls))
 ]

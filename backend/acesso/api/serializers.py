@@ -1,18 +1,18 @@
 from rest_framework import serializers
-from acesso import models
+from acesso.models import *
 
 class UsuariosSerializer(serializers.ModelSerializer):
-    class meta:
-        model = models.Usuarios
+    class Meta:
+        model = Usuarios
         fields ='__all__'
 
 class SenhasContasSerializer(serializers.ModelSerializer):
-    class meta:
-        model = models.SenhasContas
+    class Meta:
+        model = SenhasContas
         fields ='__all__'
 
 class HistoricoSenhaSerializer(serializers.ModelSerializer):
-    class meta:
-        model = models.HistoricoSenha
+    class Meta:
+        model = HistoricoSenha
         fields ='__all__'
 
