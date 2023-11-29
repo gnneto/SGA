@@ -1,24 +1,43 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Registro
 {% endblock %}
 
 {% block content %}
-<h2>Registro de Usuário</h2>
-<form method="post">
-    {% csrf_token %}
-    <label for="username">Nome de usuário:</label><br>
-    <input type="text" id="username" name="username"><br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br>
 
-    <label for="password">Senha:</label><br>
-    <input type="password" id="password" name="password"><br>
-    
-    <input type="submit" value="Registrar">
-</form>
-<a href="{% url 'login'%}">ja tenho uma conta</a><br>
-<a href="{% url 'index' %}">inicio</a>
+   
+</head>
+<body>
+    <main>
+        <div class="cadastro">
+            <form method="post">
+                {% csrf_token %}
+                <h1>Registro de Usuário</h1>
+                    <div>
+                        <label for="username">Nome de usuário:</label><br>
+                        <input type="text" id="username" name="username" placeholder="Nome de usuário" required><br>
+
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="E-mail" required><br>
+
+                        <label for="password">Senha:</label><br>
+                        <input type="password" id="password" name="password" placeholder="Senha" required><br>
+                        
+                        <button type="submit" value="Registrar">Cadastrar</button>
+                    </div>
+             </form>
+        </div>
+    </main>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+</body>
+<button><a href="{% url 'login'%}">ja tenho uma conta</a><br></button>
+<button><a href="{% url 'index' %}">inicio</a></button>
 {% endblock %}

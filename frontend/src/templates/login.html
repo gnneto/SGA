@@ -16,7 +16,7 @@ Login
     <title>Login</title>
 </head>
 
-<h2>Login</h2>
+
 
 {% if messages %}
     <ul class="messages">
@@ -25,16 +25,23 @@ Login
         {% endfor %}
     </ul>
 {% endif %}
+<body>
+    <main>
+       <div class="login">
+          <form method="post">
+            {% csrf_token %}
+             <h1>Login</h1>
+             <div>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <input type="password" id="password" name="password" class="input" placeholder="Senha" required> 
+                <button type="submit" value="Entrar">Entrar</button>
+             </div>
+          </form>
+       </div>
+    </main>
+ </body>
 
-<form method="post">
-    {% csrf_token %}
-    <label for="email">Email:</label><br id="email">
-    <input type="email" id="email" name="email"><br>
-    <label for="password">Senha:</label><br>
-    <input type="password" id="password" name="password"><br>
-    <input type="submit" value="Entrar">
-</form>
 
-<a href="{% url 'registro' %}">Não tenho uma conta</a><br>
-<a href="{% url 'index' %}">Início</a>
+<button><a href="{% url 'registro' %}">Não tenho uma conta</a><br></button>
+<button><a href="{% url 'index' %}">Início</a></button>
 {% endblock %}

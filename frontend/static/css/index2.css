@@ -1,0 +1,202 @@
+body{
+    background: linear-gradient(0deg, rgba(24, 24, 24, 0.5), rgba(24, 24, 24, 0.5)), url(https://i.postimg.cc/wTQ6g4SM/Screenshot-1.png);
+}
+
+.navbar-dark, .navbar[data-bs-theme=dark]{
+    background-color: #000814 !important;
+}
+
+nav form.d-flex{
+    background: white;
+    border-radius: 20px;
+}
+
+nav form.d-flex input.form-control{
+    border: 0;
+    background: transparent;
+    color: black;
+}
+
+nav form.d-flex input.form-control::placeholder{
+    color: rgb(122, 122, 122);
+}
+
+nav form.d-flex button.btn{
+    border: 0;
+    background: transparent;
+    color: black;
+}
+
+nav button.navbar-toggler{
+    border: 0;
+}
+
+nav div.navbar-collapse ul li a span.rotulo{
+    display: unset;
+    margin-left: 8px;
+}
+
+div.collapse{
+    margin-top: -1px;
+}
+
+section.senhas{
+    margin-top: 56px;
+}
+
+section.senhas div.gaveta{
+    padding: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 2vh;
+    width: 100%;
+}
+
+section.senhas div.provedor{
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+section.senhas div.provedor h5{
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+section.senhas div.provedor img{
+    max-width: 20px;
+}
+
+section.senhas div.card{
+    background: transparent;
+    flex: 0 0 86%;
+}
+
+section.senhas div.card-body{
+    background: #091122;
+    color: white;
+    border-radius: 20px;
+    width: 100%;
+}
+
+section.senhas div.campos input{
+    border-radius: 20px;
+    border: 0;
+}
+
+section.senhas div.campos input:focus, nav form.d-flex input.form-control:focus, nav button.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+section.senhas div.campos span.input-group-text{
+    border-radius: 0 20px 20px 0 !important;
+    cursor: pointer;
+}
+
+section.senhas div.campos span.input-group-text:hover{
+    background-color: #253f76;
+    color: white;
+    transition: 0.7s;
+}
+
+nav form.d-flex button.btn:hover{
+    color: #253f76;
+    transform: 0.5s;
+}
+
+nav form.d-flex button.btn:focus{
+    background: transparent;
+}
+
+section.senhas div.campos button{
+    border-radius: 20px;
+    background: white;
+    color: black;
+    font-size: 14px;
+    border: 0;
+}
+
+section.senhas div.campos button:hover{
+    background-color: #253f76;
+    color: white;
+    transition: 0.5s;
+}
+
+.janela-modal{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal{
+    display: block;
+    width: 60%;
+    height: 50%;
+    background-color: rgba(60, 51, 51, 0.518);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 72px;
+}
+
+.fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(62, 26, 26);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.janela-modal.abrir{
+    display: flex;
+}
+
+@keyframes abrirmodal {
+  from{
+    opacity: 0;
+    transform: translate3d(0, -20px, -5px);
+  }  
+  to{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+.abrir .modal{
+    animation: abrirmodal 0.5s;
+}
+
+@media only screen and (min-device-width: 470px), (min-width: 470px){
+    section.senhas div.card {
+        flex: 0 0 47%;
+    }
+}
+
+@media only screen and (min-device-width: 716px), (min-width: 716px){
+    section.senhas div.card {
+        flex: 0 0 21%;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    nav div.navbar-collapse ul li a span.rotulo{
+        display: none;
+        margin-left: 0;
+    }
+}

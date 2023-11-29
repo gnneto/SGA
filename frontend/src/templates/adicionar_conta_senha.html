@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-  <h2>Adicionar Conta e Senha</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/addconta.css' %}">
+
+
+ 
+</head>
+  
   <form method="post">
     {% csrf_token %}
     <label for="nomeContaVic">Nome da Conta:</label><br>
     <input type="text" id="nomeContaVic" name="nomeContaVic"><br>
-    <label for="senhaContasHash">Senha:</label><br>
+    <label for="senhaContasHash" id="senha2">Senha:</label><br>
     <input type="password" id="senhaContasHash" name="senhaContasHash"><br>
     <input type="submit" value="Adicionar">
   </form>

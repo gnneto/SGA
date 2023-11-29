@@ -1,0 +1,144 @@
+*{
+    color: white;
+}
+
+header, footer{
+    background-color: #000814;
+    padding: 0 20px;
+}
+
+header div a.nome-servico{
+    color: white;
+    text-decoration: none;
+}
+
+header div a.nome-servico:hover{
+    color: rgb(23, 101, 218);
+    transition: 0.3s;
+}
+
+footer{
+    flex-direction: column;
+}
+
+footer a.nav-link, footer p.text-body-secondary{
+    color: white !important;
+}
+
+section.conteudo{
+    background: linear-gradient(0deg, rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url(https://i.postimg.cc/wTQ6g4SM/Screenshot-1.png);
+}
+
+div.titulo{
+    padding: 22px 0 0;
+}
+
+div.titulo p{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+div.titulo h1{
+    text-align: center;
+}
+
+div.paragrafo{
+    padding: 0 30px;
+    text-align: justify;
+}
+
+div.paragrafo p a{
+    text-align: center;
+}
+
+div.paragrafo p.chamada{
+    text-align: center;
+    font-weight: bold;
+}
+
+div.paragrafo.gaveta{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+div.paragrafo.gaveta img{
+    width: 50%;
+}
+
+div.paragrafo.fundo{
+    background: #333333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+div.paragrafo.final{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+div.paragrafo.final p{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+div.features{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0 0;
+}
+
+div.features div.feature h2{
+    text-align: center;
+}
+
+div.features div.feature div.icone{
+    text-align: center;
+}
+
+div.features div.feature div.icone i{
+    font-size: 40px;
+}
+
+@media screen and (min-width: 769px){
+    div.paragrafo.gaveta {
+        flex-direction: unset;
+        justify-content: center;
+        margin-bottom: 18px;
+    }
+
+    div.paragrafo.gaveta img {
+        width: 30%;
+    }
+
+    div.paragrafo.gaveta div{
+        width: 60%;
+    }
+
+    div.features{
+        flex-direction: unset;
+        gap: 40px;
+    }
+
+    div.paragrafo.fundo{
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 20px;
+        background: #535353b3;
+        backdrop-filter: blur(1px);
+    }
+
+    div.paragrafo.final {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    footer{
+        flex-direction: unset;
+    }
+}
