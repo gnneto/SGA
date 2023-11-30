@@ -40,25 +40,6 @@ div.collapse{
     margin-top: -1px;
 }
 
-section.inicio{
-    padding: 50px 0;
-    color: white;
-    margin-top: 48px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
-section.inicio div div.exibirsenhas{
-    background: #091122;
-    color: white;
-    border-radius: 20px;
-    width: 30%;
-    padding: 16px;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
 section.senhas{
     margin-top: 56px;
 }
@@ -66,10 +47,12 @@ section.senhas{
 section.senhas div.gaveta{
     padding: 18px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     row-gap: 2vh;
     width: 100%;
+    column-gap: 2vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 section.senhas div.provedor{
@@ -130,7 +113,7 @@ nav form.d-flex button.btn:focus{
     background: transparent;
 }
 
-section.senhas div.campos button{
+section.senhas div.campos button, section.senhas div.campos div.botao{
     border-radius: 20px;
     background: white;
     color: black;
@@ -138,7 +121,12 @@ section.senhas div.campos button{
     border: 0;
 }
 
-section.senhas div.campos button:hover{
+section.senhas div.campos div.botao a{
+    text-decoration: none;
+    color: black;
+}
+
+section.senhas div.campos button:hover, section.senhas div.campos div.botao:hover{
     background-color: #253f76;
     color: white;
     transition: 0.5s;

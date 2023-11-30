@@ -1,0 +1,68 @@
+*{
+    color: white;
+}
+
+header, footer{
+    background-color: #000814;
+    padding: 0 20px;
+}
+
+header div a.nome-servico{
+    color: white;
+    text-decoration: none;
+}
+
+header div a.nome-servico:hover{
+    color: rgb(23, 101, 218);
+    transition: 0.3s;
+}
+
+footer{
+    flex-direction: column;
+}
+
+footer a.nav-link, footer p.text-body-secondary{
+    color: white !important;
+}
+
+section.conteudo{
+    background: linear-gradient(0deg, rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url(https://i.postimg.cc/wTQ6g4SM/Screenshot-1.png);
+}
+
+section.conteudo div.titulo{
+    padding: 30px 20px;
+    text-align: center;
+}
+
+section.conteudo div.titulo p{
+    margin-bottom: 0;
+}
+
+section.conteudo div.row{
+    justify-content: center;
+    gap: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 30px;
+    column-gap: 1px;
+}
+
+section.conteudo div.row div.card-body{
+    text-align: center;
+}
+
+section.conteudo div.row div.card-body p.card-text{
+    color: black;
+}
+
+@media screen and (min-width: 769px){
+    section.conteudo{
+        display: grid;
+        align-items: center;
+        height: 100vh;
+    }
+
+    footer{
+        flex-direction: unset;
+    }
+}

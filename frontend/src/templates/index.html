@@ -18,7 +18,7 @@ index
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="{% static 'css/index2.css' %}" rel="stylesheet">
 </head>
-    <p>Usuario logado: <strong>{{ request.user.username }}</strong></p><br><br> 
+    <!--<p>Usuario logado: <strong>{{ request.user.username }}</strong></p><br><br> 
     <a href="{% url 'adicionar_conta_senha' %}">Adicinar conta</a><br><br>
     <a href="{% url 'editar_conta_senha' %}">Editar contas</a><br><br><br>
 
@@ -27,7 +27,7 @@ index
     <a href="{% url 'armazenar_senha' %}">armazenar_senha/</a><br><br>
     <a href="{% url 'exibir_senhas' %}">exibir_senhas/</a><br><br>
     <a href="{% url 'adicionar_conta_senha' %}">adicionar_conta_senha/</a><br><br>
-    <a href="{% url 'editar_conta_senha' %}">editar_conta_senha/</a><br><br>
+    <a href="{% url 'editar_conta_senha' %}">editar_conta_senha/</a><br><br>-->
     <body>
         <main>
             <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
@@ -64,183 +64,12 @@ index
                     </div>
                 </div>
             </nav>
-            <section class="senhas">
-                <div class="gaveta">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <div class="provedor">
-                                <img src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png" alt="Ícone do website">
-                                <h5 class="card-title">Google</h5>
-                            </div>
-                            <div class="campos">
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="text" placeholder="Usuário" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="password" placeholder="Senha" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-primary" type="button">Editar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <div class="provedor">
-                                <img src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png" alt="Ícone do website">
-                                <h5 class="card-title">Google</h5>
-                            </div>
-                            <div class="campos">
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="text" placeholder="Usuário" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="password" placeholder="Senha" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-primary" type="button">Editar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <div class="provedor">
-                                <img src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png" alt="Ícone do website">
-                                <h5 class="card-title">Google</h5>
-                            </div>
-                            <div class="campos">
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="text" placeholder="Usuário" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="password" placeholder="Senha" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-primary" type="button">Editar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <div class="provedor">
-                                <img src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png" alt="Ícone do website">
-                                <h5 class="card-title">Google</h5>
-                            </div>
-                            <div class="campos">
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="text" placeholder="Usuário" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="password" placeholder="Senha" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-primary" type="button">Editar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <div class="provedor">
-                                <img src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png" alt="Ícone do website">
-                                <h5 class="card-title">Google</h5>
-                            </div>
-                            <div class="campos">
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="text" placeholder="Usuário" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="password" placeholder="Senha" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-primary" type="button">Editar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <div class="provedor">
-                                <img src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png" alt="Ícone do website">
-                                <h5 class="card-title">Google</h5>
-                            </div>
-                            <div class="campos">
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="text" placeholder="Usuário" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="password" placeholder="Senha" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-primary" type="button">Editar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <div class="provedor">
-                                <img src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png" alt="Ícone do website">
-                                <h5 class="card-title">Google</h5>
-                            </div>
-                            <div class="campos">
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="text" placeholder="Usuário" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="password" placeholder="Senha" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-primary" type="button">Editar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <div class="provedor">
-                                <img src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png" alt="Ícone do website">
-                                <h5 class="card-title">Google</h5>
-                            </div>
-                            <div class="campos">
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="text" placeholder="Usuário" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="input-group input-group-sm mb-3">
-                                    <input type="password" placeholder="Senha" class="form-control" aria-label="Sizing example input">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-primary" type="button">Editar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="janela-modal" id="janela-modal">
-                    <div class="modal" >
-                        <button class="fechar" id="fechar">X</button>
-                        <h1>USUARIO</h1>
-                        <h2>ID:TESTE#3462</h2>
-                        <h2>E-MAIL:TESTE-MAIL@GMAIL.COM</h2>
+            <section class="inicio">
+                <div>
+                    <h1>Olá, {{ request.user.username }}</h1>
+                    <p>Para começar a usar o cofre de senhas, clique no botão abaixo para exibi-las</p>
+                    <div class="exibirsenhas">
+                        <a href="{% url 'exibir_senhas' %}">Exibir senhas</a>
                     </div>
                 </div>
             </section>
@@ -248,6 +77,14 @@ index
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/367278d2a4.js" crossorigin="anonymous"></script>
         <script src="../src/scripts/modal.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+        <script>
+            $(".exibirsenhas").click(function() {
+            window.location = $(this).find("a").attr("href"); 
+            return false;
+            });
+        </script>
     </body>
 </html>
 {% else %}
@@ -267,7 +104,7 @@ index
                 </div>
                 <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="#" class="nav-link px-2 link-secondary">Início</a></li>
-                    <li><a href="sobre-nos/" class="nav-link px-2">Quem somos</a></li>
+                    <li><a href="{% url 'quem-somos' %}" class="nav-link px-2">Quem somos</a></li>
                 </ul>
                 <div class="col-md-3 text-end"> 
                     <a href="{% url 'login' %}" class="btn btn-outline-primary me-2">Entrar</a>
@@ -323,7 +160,7 @@ index
                     </div>
                 </div>
                 <div class="paragrafo final">
-                    <p class="chamada">Não deixe sua segurança para depois! <a href="/cadastro/">Cadastre-se agora >></a></p>
+                    <p class="chamada">Não deixe sua segurança para depois! <a href="{% url 'registro' %}">Cadastre-se agora >></a></p>
                     <p>Proteja suas informações e simplifique sua vida digital hoje mesmo. Junte-se a nós e 
                     descubra a tranquilidade de ter um gerenciador de senhas confiável ao seu lado. Sua 
                     segurança não pode esperar. Cadastre-se agora e experimente a liberdade de navegar com 
@@ -334,7 +171,7 @@ index
                 <p class="col-md-4 mb-0 text-body-secondary">© 2023 Gerenciador de Senhas</p>
                 <ul class="nav col-md-4 justify-content-end">
                     <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Início</a></li>
-                    <li class="nav-item"><a href="sobre-nos/" class="nav-link px-2 text-body-secondary">Quem somos</a></li>
+                    <li class="nav-item"><a href="{% url 'quem-somos' %}" class="nav-link px-2 text-body-secondary">Quem somos</a></li>
                 </ul>
             </footer>
         </main>
