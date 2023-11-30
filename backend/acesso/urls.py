@@ -12,6 +12,6 @@ urlpatterns = [
     path('exibir_senhas/', views.exibir_senhas, name='exibir_senhas'),
     path('adicionar_conta_senha/', views.adicionar_conta_senha, name='adicionar_conta_senha'),
     path('editar_conta_senha/', views.editar_conta_senha, name='editar_conta_senha'),
-
-
+    path('privacidade/', views.privacidade, name='privacidade'),
+    path('quem-somos/', views.quem_somos, name='quem-somos')
 ]

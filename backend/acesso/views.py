@@ -6,10 +6,16 @@ from django.contrib import messages
 from .models import SenhasContas, Usuarios
 from django.shortcuts import get_object_or_404
 from .forms import EditarContaForm
+from django.http import JsonResponse
 
 def index(request):
-    
     return render(request, 'index.html')
+
+def privacidade(request):
+    return render(request, 'privacidade.html')
+
+def quem_somos(request):
+    return render(request, 'quem_somos.html')
 
 def registro(request):
     if request.method == 'POST':
@@ -76,7 +82,7 @@ def exibir_senhas(request):
 
 
 def adicionar_conta_senha(request):
-    if request.method == 'POST':
+    '''if request.method == 'POST':
         nomeContaVic = request.POST['nomeContaVic']
         senhaContasHash = request.POST['senhaContasHash']
         usuario = Usuarios.objects.get(user=request.user)
@@ -85,6 +91,18 @@ def adicionar_conta_senha(request):
 
         messages.success(request, 'Conta e senha adicionadas com sucesso')
         return redirect('adicionar_conta_senha')
+    else:
+        return render(request, 'adicionar_conta_senha.html')'''
+    if request.method == 'POST':
+        nomeContaVic = request.POST['nomeContaVic']
+        senhaContasHash = request.POST['senhaContasHash']
+        usuario = Usuarios.objects.get(user=request.user)
+
+        SenhasContas.objects.create(usuario=usuario, nomeContaVic=nomeContaVic, senhaContasHash=senhaContasHash)
+
+        messages.success(request, 'Conta e senha adicionadas com sucesso')
+        
+        return JsonResponse({'success': True, 'redirect': '/exibir_senhas/'})
     else:
         return render(request, 'adicionar_conta_senha.html')
     
