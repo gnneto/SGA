@@ -13,11 +13,14 @@ Editar
 
  
 </head>
-<form method="post">
-  {% csrf_token %}
-  {{ form }}
-  <input type="submit" value="Editar" id="teste">
-</form>
+<div class="gaveta">
+  <form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Editar" id="teste">
+  </form>
+</div>
+
 
 <a href="{% url 'index' %}">pagina inicial</a>
 {% endblock %}

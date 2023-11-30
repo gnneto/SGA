@@ -1,3 +1,30 @@
-#teste {
-    background-color: aqua;
+body{
+    background: linear-gradient(0deg, rgba(24, 24, 24, 0.5), rgba(24, 24, 24, 0.5)), url(https://i.postimg.cc/wTQ6g4SM/Screenshot-1.png);
+}
+
+div.gaveta{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    background: #091122;
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    width: 20%;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    height: fit-content;
+}
+
+form input[type="password"], form select, form button, form input[type="submit"]{
+    height: 33px;
+    width: 95%;
 }
