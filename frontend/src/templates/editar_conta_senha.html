@@ -1,7 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Editar
+{% endblock %}
+
+{% block content %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/editar.css' %}">
+
+
+ 
+</head>
 <form method="post">
   {% csrf_token %}
   {{ form }}
-  <input type="submit" value="Editar">
+  <input type="submit" value="Editar" id="teste">
 </form>
 
 <a href="{% url 'index' %}">pagina inicial</a>
+{% endblock %}
