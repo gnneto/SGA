@@ -189,13 +189,13 @@ section.senhas div.campos button:hover, section.senhas div.campos div.botao:hove
     animation: abrirmodal 0.5s;
 }
 
-@media only screen and (min-device-width: 470px), (min-width: 470px){
+@media only screen and (min-width: 470px){
     section.senhas div.card {
         flex: 0 0 47%;
     }
 }
 
-@media only screen and (min-device-width: 716px), (min-width: 716px){
+@media only screen and (min-width: 716px){
     section.senhas div.card {
         flex: 0 0 21%;
     }
