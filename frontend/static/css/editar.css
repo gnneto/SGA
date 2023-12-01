@@ -3,28 +3,50 @@ body{
 }
 
 div.gaveta{
-    height: 100vh;
     display: flex;
+    height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
-form{
+div.container{
     background: #091122;
     color: white;
     padding: 50px;
     border-radius: 20px;
-    display: flex;
     width: 20%;
+    height: fit-content;
+}
+
+div.container form{
+    display: flex;
     align-content: center;
     justify-content: center;
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    height: fit-content;
 }
 
-form input[type="password"], form select, form button, form input[type="submit"]{
+form input[type="password"], form select, div.container button, form input[type="submit"]{
     height: 33px;
     width: 95%;
+}
+
+div.container button.voltar{
+    cursor: pointer;
+    border: 0;
+    color: black;
+    text-decoration: none;
+    margin: 9px;
+    margin-top: 12px;
+}
+
+div.container button.voltar:hover{
+    background: #273f72;
+    transition: 1s;
+}
+
+div.container button.voltar:hover a{
+    color: white;
+    transition: 1s;
 }

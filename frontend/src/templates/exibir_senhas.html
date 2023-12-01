@@ -31,10 +31,6 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -70,11 +66,11 @@
                             </div>
                             <div class="campos">
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="text" placeholder="Usuário" class="form-control" aria-label="Sizing example input" value="{{ senha_conta.nomeContaVic }}">
-                                    <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
+                                    <input type="password" placeholder="Usuário" class="form-control" aria-label="Sizing example input" value="{{ senha_conta.nomeContaVic }}" disabled>
+                                    <span class="input-group-text toggle-password"><i class="fa-solid fa-eye"></i></span>
                                 </div>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="password" placeholder="Senha" class="form-control" aria-label="Sizing example input" value="{{ senha_conta.senhaContasHash }}">
+                                    <input type="password" placeholder="Senha" class="form-control" aria-label="Sizing example input" value="{{ senha_conta.senhaContasHash }}" disabled>
                                     <span class="input-group-text toggle-password"><i class="fa-solid fa-eye"></i></span>
                                 </div>
                                 <div class="d-grid gap-2 col-6 mx-auto">

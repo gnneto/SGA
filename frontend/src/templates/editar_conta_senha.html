@@ -14,13 +14,23 @@ Editar
  
 </head>
 <div class="gaveta">
-  <form method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Editar" id="teste">
-  </form>
+  <div class="container">
+    <form method="post">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" value="Editar" id="teste">
+    </form>
+    <button class="botao voltar"><a href="{% url 'exibir_senhas' %}">Voltar</a></button>
+  </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-<a href="{% url 'index' %}">pagina inicial</a>
+<script>
+  $(".botao").click(function() {
+        window.location = $(this).find("a").attr("href"); 
+        return false;
+    });
+</script>
+
 {% endblock %}
